@@ -48,8 +48,9 @@ public class SignInFragment extends Fragment {
                 Navigation.findNavController(getView()).navigate(
                         SignInFragmentDirections
                             .actionSignInFragmentToMainActivity(
-
+                                    generateJwt(binding.editEmail.getText().toString())
                             ));
+                getActivity().finish();
         });
     }
 
